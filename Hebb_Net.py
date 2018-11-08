@@ -1,14 +1,21 @@
 x = []
-y = []
+bias = []
 print(" Enter the number of inputs")
 n = int(input())
 print("Enter the number of input vectors")
 n1 = int(input())
+w = [0] * n1
+bias = [0] * n
 for i in range(0,n):
 	for j in range(0,n1):
 		print ("Enter input number: " + str(j+1))
-		x.append(int(input()))
-	bias = 1
+		x.insert(j, int(input()))
 	print("Enter the output")
-	y.append(int(input))
+	y = int(input())
+	for k in range(0,n1):
+		dw = x[k]*y
+		w[k] = w[k] + dw
+	
+
+
     
