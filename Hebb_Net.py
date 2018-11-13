@@ -1,3 +1,5 @@
+import numpy as np 
+import matplotlib.pyplot as plt
 x = []
 bias = 0
 print(" Enter the number of inputs")
@@ -16,6 +18,14 @@ for i in range(0,n):
 		w[k] = w[k] + dw
 	db = y
 	bias = bias + db
+print("The values of weights are:")
+for j in range(0,n1):
+	print(w[j])
+print("The final value of the bias is: x" + str(bias))
+x = np.arange(3)
+y = (-bias/w[1])-(x*(w[0]/w[1]))
+plt.plot(x, y)
+plt.show()
 
 
-    
+   
